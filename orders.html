@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الطلبات - Pizzeria 7Vibes</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Forum&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/orders-style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preload" data-preload>
+        <div class="circle"></div>
+        <p class="text">7Vibes</p>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-container">
+                <h1 class="logo-text">7Vibes</h1>
+            </div>
+            <h1>نظام إدارة الطلبات</h1>
+            <p class="subtitle">متابعة وإدارة طلبات المطعم بكل سهولة</p>
+            <div class="separator"></div>
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <span class="stat-icon">📋</span>
+                <div class="stat-label">طلبات جديدة</div>
+                <div class="stat-value" id="newOrders">0</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">👨‍🍳</span>
+                <div class="stat-label">قيد التحضير</div>
+                <div class="stat-value" id="preparingOrders">0</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">✅</span>
+                <div class="stat-label">جاهزة للتسليم</div>
+                <div class="stat-value" id="readyOrders">0</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">📊</span>
+                <div class="stat-label">إجمالي اليوم</div>
+                <div class="stat-value" id="totalOrders">0</div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">جميع الطلبات</button>
+            <button class="filter-btn" data-filter="pending">قيد الانتظار</button>
+            <button class="filter-btn" data-filter="preparing">قيد التحضير</button>
+            <button class="filter-btn" data-filter="ready">جاهز</button>
+        </div>
+
+        <!-- Orders Grid -->
+        <div class="orders-grid" id="ordersGrid">
+            <!-- Orders will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/orders-api-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
+
